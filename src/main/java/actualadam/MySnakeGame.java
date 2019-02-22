@@ -30,6 +30,9 @@ public class MySnakeGame implements SnakeGame {
     return x + width * y;
   }
 
+  private final static String SNAKE_TILE = "X";
+  private final static String EMPTY_TILE = ".";
+
   public String getGameBoard() {
     StringBuilder sb = new StringBuilder();
     for (int y = 0; y < height; y++) {
@@ -37,7 +40,7 @@ public class MySnakeGame implements SnakeGame {
         if (headX == x && headY == y) {
           sb.append("X");
         } else {
-          sb.append(isBlocked(x,y) ? "X" : " ");
+          sb.append(isBlocked(x,y) ? SNAKE_TILE : EMPTY_TILE);
         }
       }
       sb.append("\n");
