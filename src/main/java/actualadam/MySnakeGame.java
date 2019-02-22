@@ -74,6 +74,10 @@ public class MySnakeGame implements SnakeGame {
       return false;
     }
 
+    if (x > width || x < 0 || y > height || y < 0) {
+      return false;
+    }
+
     block(x, y);
     headX = x;
     headY = y;
